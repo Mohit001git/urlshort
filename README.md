@@ -35,18 +35,31 @@ A full-stack web application that allows users to generate short, shareable link
 
 url-shortener/
 ├── backend/
-│ ├── models/
-│ ├── routes/
-│ ├── controllers/
-│ ├── connect.js
-│ └── server.js
+│   ├── controllers/           # Logic for creating, redirecting, and analytics
+│   │   └── urlController.js
+│   ├── models/                # Mongoose schemas
+│   │   └── url.js
+│   ├── routes/                # Express routes
+│   │   └── url.js
+│   ├── connect.js             # MongoDB connection logic
+│   ├── server.js              # Main Express server
+│   └── .env                   # Environment variables for backend
+│
 ├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ └── App.jsx
-├── README.md
-└── .gitignore
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/        # React components (e.g., Form, Output)
+│   │   │   └── UrlForm.jsx
+│   │   ├── App.jsx            # Root component
+│   │   └── main.jsx           # Entry point
+│   ├── .env                   # Environment variables for frontend
+│   ├── tailwind.config.js     # Tailwind configuration
+│   └── vite.config.js         # Vite (or webpack) setup
+│
+├── README.md                  # Project documentation
+├── package.json               # Project metadata and scripts (frontend)
+├── .gitignore
 
 
 ---
